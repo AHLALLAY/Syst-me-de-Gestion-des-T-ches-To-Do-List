@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="To Do Liste website">
+    <meta name="keywords" content="HTML, CSS, JavaScript, To Do Liste, tailwind, tasks, gestionnaire">
+    <meta name="author" content="Abderrahmane AHLALLAY">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | To Do Liste</title>
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex">
+
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 h-screen shadow-lg p-4">
+            <!-- Logo -->
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold">
+                    <span class="text-red-600">To</span><br>
+                    <span class="text-green-600">Do</span><br>
+                    <span class="text-blue-600">Liste</span>
+                </h2>
+            </div>
+
+            <!-- Task Input and Buttons -->
+            <div class="mb-4">
+                <button id="nouvelle-tache" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Nouvelle tâche</button>
+                <div class="flex items-center mt-2">
+                    <input type="text" class="text-blue-400 border rounded p-2 flex-grow mr-2" placeholder="recherche une tâche" aria-label="recherche une tâche">
+                    <button class= "text-white p-2 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded mt-2 w-full">Filtrer</button>
+            </div>
+
+            <!-- Avancement -->
+            <h2 class="flex justify-between mb-6 text-xl font-semibold">
+                <span class="font-semibold">0%</span> d'Avancement
+            </h2>
+        </aside>
+
+        
+    </div>
+</body>
+
+</html>
