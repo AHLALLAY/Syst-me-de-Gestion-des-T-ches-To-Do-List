@@ -28,12 +28,16 @@
 
             <!-- Task Input and Buttons -->
             <div class="mb-4">
-                <button id="nouvelle-tache" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Nouvelle tâche</button>
+                <button id="nouvelle-tache" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Nouvelle
+                    tâche</button>
                 <div class="flex items-center mt-2">
-                    <input type="text" class="text-blue-400 border rounded p-2 flex-grow mr-2" placeholder="recherche une tâche" aria-label="recherche une tâche">
-                    <button class= "text-white p-2 rounded">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    <input type="text" class="text-blue-400 border rounded p-2 flex-grow mr-2"
+                        placeholder="recherche une tâche" aria-label="recherche une tâche">
+                    <button class="text-white p-2 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                         </svg>
                     </button>
                 </div>
@@ -76,10 +80,32 @@
                     </div>
                 </div>
             </div>
-            
-            
+            <!-- Modal d'ajout -->
+            <div id="modal-ajoute" class="hidden mt-6 bg-white p-4 rounded shadow">
+                <h2 class="text-lg font-semibold">Nouvelle Tâche</h2>
+                <form class="mt-4">
+                    <input type="text" class="border rounded p-2 w-full mb-2" placeholder="Nom de la tâche" required
+                        aria-label="Nom de la tâche">
+                    <textarea class="border rounded p-2 w-full mb-2" placeholder="Description" required
+                        aria-label="Description"></textarea>
+                    <select class="border rounded p-2 w-full mb-2" required aria-label="Priorité">
+                        <option value="" disabled selected>Priorité</option>
+                        <option>Élevée</option>
+                        <option>Moyenne</option>
+                        <option>Basse</option>
+                    </select>
+                    <input type="date" class="border rounded p-2 w-full mb-2" required aria-label="Date de la tâche">
+                    <div class="flex justify-between">
+                        <button id="annuler-tache" type="button"
+                            class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Annuler</button>
+                        <button id="ajouter-tache" type="submit"
+                            class="bg-blue-500 text-white px-4 py-2 rounded">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+
         </main>
-        
+
     </div>
 </body>
 
