@@ -103,7 +103,25 @@
                     </div>
                 </form>
             </div>
-
+            <!-- Modal de filtrage -->
+            <div class="hidden mt-6 bg-white p-4 rounded shadow">
+                <h2 class="text-lg font-semibold">Options de Filtrage</h2>
+                <div class="mt-4">
+                    <label class="block">
+                        <input type="radio" name="filter" value="date" class="mr-2" aria-label="Filtrer par date">
+                        Date
+                    </label>
+                    <label class="block">
+                        <input type="radio" name="filter" value="priority" class="mr-2"
+                            aria-label="Filtrer par priorité">
+                        Priorité
+                    </label>
+                    <input type="text" class="border rounded p-2 w-full mt-2 mb-2" placeholder="Valeur de filtrage"
+                        aria-label="Valeur de filtrage">
+                    <input type="text" class="border rounded p-2 w-full" placeholder="Autre critère"
+                        aria-label="Autre critère">
+                </div>
+            </div>
         </main>
 
     </div>
