@@ -1,130 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="To Do Liste website">
-    <meta name="keywords" content="HTML, CSS, JavaScript, To Do Liste, tailwind, tasks, gestionnaire">
+    <meta name="description" content="Application de gestion de tâches TaskFlow - Organisez vos tâches quotidiennes efficacement">
+    <meta name="keywords" content="HTML, CSS, JavaScript, To Do Liste, tailwind, tasks, gestionnaire de tâches">
     <meta name="author" content="Abderrahmane AHLALLAY">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow | To Do Liste</title>
-    <link href="/src/output.css" rel="stylesheet">
+    <title>TaskFlow | Gestionnaire de Tâches</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
-
-    <div class="flex">
-
+<body class="bg-gray-100 min-h-screen">
+    <!-- Structure principale -->
+    <div class="flex flex-col md:flex-row min-h-screen">
         <!-- Sidebar -->
-        <aside class="bg-white w-64 h-screen shadow-lg p-4">
-            <!-- Logo -->
-            <div class="text-center mb-6">
-                <h2 class="text-2xl font-bold">
-                    <span class="text-red-600">To</span><br>
-                    <span class="text-green-600">Do</span><br>
-                    <span class="text-blue-600">Liste</span>
-                </h2>
+        <aside class="bg-white w-full md:w-64 shadow-lg p-4 md:h-screen" role="complementary">
+            <!-- Logo et titre -->
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold">
+                    <span class="block text-red-600">Task</span>
+                    <span class="block text-blue-600">Flow</span>
+                </h1>
+                <p class="text-gray-600 text-sm mt-2">Gestionnaire de tâches</p>
             </div>
 
-            <!-- Task Input and Buttons -->
-            <div class="mb-4">
-                <button id="nouvelle-tache" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Nouvelle
-                    tâche</button>
-                <div class="flex items-center mt-2">
-                    <input type="text" class="text-blue-400 border rounded p-2 flex-grow mr-2"
-                        placeholder="recherche une tâche" aria-label="recherche une tâche">
-                    <button class="text-white p-2 rounded">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            <!-- Section des actions -->
+            <div class="space-y-4">
+                <!-- Bouton nouvelle tâche -->
+                <button id="nouvelle-tache" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                        aria-label="Créer une nouvelle tâche">
+                    <span class="flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                         </svg>
-                    </button>
-                </div>
-                <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded mt-2 w-full">Filtrer</button>
-            </div>
+                        Nouvelle tâche
+                    </span>
+                </button>
 
-            <!-- Avancement -->
-            <h2 class="flex justify-between mb-6 text-xl font-semibold">
-                <span class="font-semibold">0%</span> d'Avancement
-            </h2>
+                <!-- Barre de recherche -->
+                <div class="relative">
+                    <label for="searchInput" class="sr-only">Rechercher une tâche</label>
+                    <input type="text" 
+                           id="searchInput"
+                           class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                           placeholder="Rechercher une tâche..."
+                           aria-label="Rechercher une tâche">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" 
+                         fill="none" 
+                         stroke="currentColor" 
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+
+                <!-- Filtres -->
+                <div class="border-t pt-4">
+                    <h2 class="text-sm font-semibold text-gray-600 mb-2">Filtres</h2>
+                    <div class="space-y-2">
+                        <button id="filter-all" 
+                                class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                                aria-pressed="true">
+                            Toutes les tâches
+                        </button>
+                        <button id="filter-priority" 
+                                class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            Par priorité
+                        </button>
+                        <button id="filter-date" 
+                                class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            Par date
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progression -->
+                <div class="border-t pt-4">
+                    <h2 class="text-sm font-semibold text-gray-600 mb-2">Progression</h2>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span id="progress-text" class="text-sm text-gray-600">Tâches terminées</span>
+                            <span id="progress-percentage" class="text-sm font-medium">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div id="progress-bar" 
+                                 class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" 
+                                 style="width: 0%"
+                                 role="progressbar" 
+                                 aria-valuenow="0" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </aside>
-        <!-- Main Content -->
-        <main class="flex-1 p-4">
-            <!-- Task Columns -->
-            <div class="grid grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h2 class="flex justify-between mb-2 text-lg font-semibold">
-                        À faire <span class="font-semibold"> (0)</span>
-                    </h2>
-                    <div>
-                        <!-- Liste des tâches -->
-                    </div>
-                </div>
 
-                <div class="bg-white p-4 rounded shadow">
-                    <h2 class="flex justify-between mb-2 text-lg font-semibold">
-                        En cours <span class="font-semibold"> (0)</span>
-                    </h2>
-                    <div>
-                        <!-- Liste des tâches -->
+        <!-- Contenu principal -->
+        <main class="flex-1 p-4" role="main">
+            <!-- Grille des tâches -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Colonne À faire -->
+                <section id="todo-column" 
+                         class="bg-white rounded-lg shadow-sm"
+                         aria-labelledby="todo-heading">
+                    <div class="p-4 border-b border-gray-200">
+                        <h2 id="todo-heading" class="text-lg font-semibold text-gray-800 flex items-center justify-between">
+                            <span class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                                À faire
+                            </span>
+                            <span class="text-sm text-gray-500 task-count" aria-label="nombre de tâches à faire">(0)</span>
+                        </h2>
                     </div>
-                </div>
+                    <div class="p-4 space-y-2 min-h-[200px]" data-status="À faire"></div>
+                </section>
 
-                <div class="bg-white p-4 rounded shadow">
-                    <h2 class="flex justify-between mb-2 text-lg font-semibold">
-                        Terminées <span class="font-semibold"> (0)</span>
-                    </h2>
-                    <div>
-                        <!-- Liste des tâches -->
+                <!-- Colonne En cours -->
+                <section id="progress-column" 
+                         class="bg-white rounded-lg shadow-sm"
+                         aria-labelledby="progress-heading">
+                    <div class="p-4 border-b border-gray-200">
+                        <h2 id="progress-heading" class="text-lg font-semibold text-gray-800 flex items-center justify-between">
+                            <span class="flex items-center">
+                                <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                                En cours
+                            </span>
+                            <span class="text-sm text-gray-500 task-count" aria-label="nombre de tâches en cours">(0)</span>
+                        </h2>
                     </div>
-                </div>
+                    <div class="p-4 space-y-2 min-h-[200px]" data-status="En cours"></div>
+                </section>
+
+                <!-- Colonne Terminées -->
+                <section id="done-column" 
+                         class="bg-white rounded-lg shadow-sm"
+                         aria-labelledby="done-heading">
+                    <div class="p-4 border-b border-gray-200">
+                        <h2 id="done-heading" class="text-lg font-semibold text-gray-800 flex items-center justify-between">
+                            <span class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                                Terminées
+                            </span>
+                            <span class="text-sm text-gray-500 task-count" aria-label="nombre de tâches terminées">(0)</span>
+                        </h2>
+                    </div>
+                    <div class="p-4 space-y-2 min-h-[200px]" data-status="Terminées"></div>
+                </section>
             </div>
-            <!-- Modal d'ajout -->
-            <div id="modal-ajoute" class="hidden mt-6 bg-white p-4 rounded shadow">
-                <h2 class="text-lg font-semibold">Nouvelle Tâche</h2>
-                <form class="mt-4">
-                    <input type="text" class="border rounded p-2 w-full mb-2" placeholder="Nom de la tâche" required
-                        aria-label="Nom de la tâche">
-                    <textarea class="border rounded p-2 w-full mb-2" placeholder="Description" required
-                        aria-label="Description"></textarea>
-                    <select class="border rounded p-2 w-full mb-2" required aria-label="Priorité">
-                        <option value="" disabled selected>Priorité</option>
-                        <option>Élevée</option>
-                        <option>Moyenne</option>
-                        <option>Basse</option>
-                    </select>
-                    <input type="date" class="border rounded p-2 w-full mb-2" required aria-label="Date de la tâche">
-                    <div class="flex justify-between">
-                        <button id="annuler-tache" type="button"
-                            class="bg-gray-300 text-gray-700 px-4 py-2 rounded">Annuler</button>
-                        <button id="ajouter-tache" type="submit"
-                            class="bg-blue-500 text-white px-4 py-2 rounded">Ajouter</button>
+        </main>
+    </div>
+
+    <!-- Modal d'ajout de tâche -->
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 transform transition-all">
+            <div class="p-6">
+                <h2 id="modal-title" class="text-xl font-semibold text-gray-900 mb-4">Nouvelle tâche</h2>
+                <form id="task-form" class="space-y-4">
+                    <!-- Titre -->
+                    <div>
+                        <label for="task-title" class="block text-sm font-medium text-gray-700">Titre</label>
+                        <input type="text" 
+                               id="task-title"
+                               name="title"
+                               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                               required
+                               minlength="3"
+                               maxlength="50">
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <label for="task-description" class="block text-sm font-medium text-gray-700">Description</label>
+                        <textarea id="task-description"
+                                  name="description"
+                                  rows="3"
+                                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                  required
+                                  minlength="10"
+                                  maxlength="200"></textarea>
+                    </div>
+
+                    <!-- Priorité -->
+                    <div>
+                        <label for="task-priority" class="block text-sm font-medium text-gray-700">Priorité</label>
+                        <select id="task-priority"
+                                name="priority"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                required>
+                            <option value="">Sélectionner une priorité</option>
+                            <option value="haute">Haute</option>
+                            <option value="moyenne">Moyenne</option>
+                            <option value="basse">Basse</option>
+                        </select>
+                    </div>
+
+                    <!-- Date d'échéance -->
+                    <div>
+                        <label for="task-due-date" class="block text-sm font-medium text-gray-700">Date d'échéance</label>
+                        <input type="date"
+                               id="task-due-date"
+                               name="dueDate"
+                               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                               required>
+                    </div>
+
+                    <!-- Boutons -->
+                    <div class="flex justify-end space-x-3 mt-6">
+                        <button type="button"
+                                id="cancel-task"
+                                class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Annuler
+                        </button>
+                        <button type="submit"
+                                class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Ajouter
+                        </button>
                     </div>
                 </form>
             </div>
-            <!-- Modal de filtrage -->
-            <div class="hidden mt-6 bg-white p-4 rounded shadow">
-                <h2 class="text-lg font-semibold">Options de Filtrage</h2>
-                <div class="mt-4">
-                    <label class="block">
-                        <input type="radio" name="filter" value="date" class="mr-2" aria-label="Filtrer par date">
-                        Date
-                    </label>
-                    <label class="block">
-                        <input type="radio" name="filter" value="priority" class="mr-2"
-                            aria-label="Filtrer par priorité">
-                        Priorité
-                    </label>
-                    <input type="text" class="border rounded p-2 w-full mt-2 mb-2" placeholder="Valeur de filtrage"
-                        aria-label="Valeur de filtrage">
-                    <input type="text" class="border rounded p-2 w-full" placeholder="Autre critère"
-                        aria-label="Autre critère">
-                </div>
-            </div>
-        </main>
-
+        </div>
     </div>
-</body>
 
+    <!-- Toast notifications -->
+    <div id="toast-container" 
+         class="fixed bottom-4 right-4 z-50 space-y-2"
+         role="status"
+         aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="/js/index.js"></script>
+</body>
 </html>
