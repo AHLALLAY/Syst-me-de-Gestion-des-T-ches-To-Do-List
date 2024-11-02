@@ -46,15 +46,15 @@ function showToast(message) {
 function getPriorityStyles(priority) {
     if(priority.toLowerCase() === 'haute') {
         return {
-            border: 'border-l-4 border-red-500'
+            border: 'border-l-4 border-red-500 border'
         };
     } else if(priority.toLowerCase() === 'moyenne') {
         return {
-            border: 'border-l-4 border-orange-500'
+            border: 'border-l-4 border-yellow-500 border'
         };
     } else {
         return {
-            border: 'border-l-4 border-green-500'
+            border: 'border-l-4 border-green-500 border'
         };
     }
 }
