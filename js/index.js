@@ -44,21 +44,12 @@ function showToast(message) {
 }
 
 function getPriorityStyles(priority) {
-    if(priority.toLowerCase() === 'haute') {
-        return {
-            border: 'border-l-4 border-red-500 border'
-        };
-    } else if(priority.toLowerCase() === 'moyenne') {
-        return {
-            border: 'border-l-4 border-yellow-500 border'
-        };
-    } else {
-        return {
-            border: 'border-l-4 border-green-500 border'
-        };
+    switch(priority.toLowerCase()){
+        case 'haute': return {border: 'border-l-4 border-red-500 border'}; break;
+        case 'moyenne': return {border: 'border-l-4 border-yellow-500 border'}; break;
+        case 'basse': return {border: 'border-l-4 border-green-500 border'}; break;
     }
 }
-
 function createTaskElement(task) {
     const taskElement = document.createElement("div");
     const priorityStyles = getPriorityStyles(task.priority);
