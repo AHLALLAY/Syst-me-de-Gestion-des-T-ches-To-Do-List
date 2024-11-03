@@ -1,4 +1,5 @@
 // Sélection des éléments du DOM
+
 const taskForm = document.getElementById("task-form");
 const newTaskButton = document.getElementById("nouvelle-tache");
 const cancelTaskButton = document.getElementById("cancel-task");
@@ -71,7 +72,7 @@ function createTaskElement(task) {
         </div>
         <p class="text-gray-600 text-sm my-2">${task.description}</p>
         <div class="text-xs ${dueDateClass} mb-2">
-            <span>📅 Échéance: ${new Date(task.dueDate).toLocaleDateString()}</span>
+            <span>📅 Livraison sera le : ${new Date(task.dueDate).toLocaleDateString()}</span>
         </div>
         <div class="flex gap-2">
             ${task.status === "À faire" ? 
@@ -198,7 +199,7 @@ function saveTasks() {
 function isDueDateOverdue(dueDate) {
     const today = new Date();
     const due = new Date(dueDate);
-    return today >= due;
+    return today > due;
 }
 
 newTaskButton.addEventListener("click", () => {
