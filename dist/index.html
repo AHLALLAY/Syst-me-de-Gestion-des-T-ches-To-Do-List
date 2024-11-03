@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description"
-        content="Application de gestion de tâches TaskFlow - Organisez vos tâches quotidiennes efficacement">
+    <meta name="description" content="Application de gestion de tâches TaskFlow - Organisez vos tâches quotidiennes efficacement">
     <meta name="keywords" content="HTML, CSS, JavaScript, To Do Liste, tailwind, tasks, gestionnaire de tâches">
     <meta name="author" content="Abderrahmane AHLALLAY">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +12,8 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-    <!-- Structure principale -->
     <div class="flex flex-col md:flex-row min-h-screen">
-        <!-- Sidebar -->
-        <aside class="bg-white w-full md:w-64 shadow-lg p-4 md:h-screen" role="complementary">
-            <!-- Logo et titre -->
+        <aside class="bg-white w-full md:w-64 shadow-lg p-4 md:h-screen backdrop-blur-lg" role="complementary">
             <div class="text-center mb-8">
                 <h1 class="text-4xl font-bold">
                     <span class="block text-red-600">Task</span>
@@ -25,10 +21,7 @@
                 </h1>
                 <p class="text-gray-600 text-sm mt-2">Gestionnaire de tâches</p>
             </div>
-
-            <!-- Section des actions -->
             <div class="space-y-4">
-                <!-- Bouton nouvelle tâche -->
                 <button id="nouvelle-tache"
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                     aria-label="Créer une nouvelle tâche">
@@ -39,8 +32,6 @@
                         Nouvelle tâche
                     </span>
                 </button>
-
-                <!-- Barre de recherche -->
                 <div class="relative">
                     <label for="searchInput" class="sr-only">Rechercher une tâche</label>
                     <input type="text" id="searchInput"
@@ -52,8 +43,6 @@
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </div>
-
-                <!-- Progression -->
                 <div class="border-t pt-4">
                     <h2 class="text-sm font-semibold text-gray-600 mb-2">Progression</h2>
                     <div class="space-y-2">
@@ -72,11 +61,8 @@
             </div>
         </aside>
 
-        <!-- Contenu principal -->
-        <main class="flex-1 p-4" role="main">
-            <!-- Grille des tâches -->
+        <main class="flex-1 p-4 bg-gradient-to-r from-red-500 to-blue-500" role="main">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Colonne À faire -->
                 <section id="todo-column" class="bg-white rounded-lg shadow-sm" aria-labelledby="todo-heading">
                     <div class="p-4 border-b border-gray-200">
                         <h2 id="todo-heading"
@@ -92,7 +78,6 @@
                     <div class="p-4 space-y-2 min-h-[200px]" data-status="À faire"></div>
                 </section>
 
-                <!-- Colonne En cours -->
                 <section id="progress-column" class="bg-white rounded-lg shadow-sm" aria-labelledby="progress-heading">
                     <div class="p-4 border-b border-gray-200">
                         <h2 id="progress-heading"
@@ -108,7 +93,6 @@
                     <div class="p-4 space-y-2 min-h-[200px]" data-status="En cours"></div>
                 </section>
 
-                <!-- Colonne Terminées -->
                 <section id="done-column" class="bg-white rounded-lg shadow-sm" aria-labelledby="done-heading">
                     <div class="p-4 border-b border-gray-200">
                         <h2 id="done-heading"
@@ -127,14 +111,12 @@
         </main>
     </div>
 
-    <!-- Modal d'ajout de tâche -->
     <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
         role="dialog" aria-labelledby="modal-title" aria-modal="true">
-        <div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 transform transition-all">
+        <div id="modal-content" class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 transform transition-all backdrop-blur-lg">
             <div class="p-6">
                 <h2 id="modal-title" class="text-xl font-semibold text-gray-900 mb-4">Nouvelle tâche</h2>
                 <form id="task-form" class="space-y-4">
-                    <!-- Titre -->
                     <div>
                         <label for="task-title" class="block text-sm font-medium text-gray-700">Titre</label>
                         <input type="text" id="task-title" name="title"
@@ -142,16 +124,13 @@
                             required minlength="3" maxlength="20">
                     </div>
 
-                    <!-- Description -->
                     <div>
-                        <label for="task-description"
-                            class="block text-sm font-medium text-gray-700">Description</label>
+                        <label for="task-description" class="block text-sm font-medium text-gray-700">Description</label>
                         <textarea id="task-description" name="description" rows="3"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             required minlength="10" maxlength="200"></textarea>
                     </div>
 
-                    <!-- Priorité -->
                     <div>
                         <label for="task-priority" class="block text-sm font-medium text-gray-700">Priorité</label>
                         <select id="task-priority" name="priority"
@@ -164,16 +143,13 @@
                         </select>
                     </div>
 
-                    <!-- Date d'échéance -->
                     <div>
-                        <label for="task-due-date" class="block text-sm font-medium text-gray-700">Date
-                            d'échéance</label>
+                        <label for="task-due-date" class="block text-sm font-medium text-gray-700">Date d'échéance</label>
                         <input type="date" id="task-due-date" name="dueDate"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" minlength="t"
                             required>
                     </div>
 
-                    <!-- Boutons -->
                     <div class="flex justify-end space-x-3 mt-6">
                         <button type="button" id="cancel-task"
                             class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -189,10 +165,8 @@
         </div>
     </div>
 
-    <!-- Toast notifications -->
     <div id="toast-container" class="fixed bottom-4 right-4 z-50 space-y-2" role="status" aria-live="polite"></div>
 
-    <!-- Scripts -->
     <script src="/js/index.js"></script>
 </body>
 
