@@ -3,7 +3,9 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Taille](https://img.shields.io/badge/taille-légère-green.svg)
 ![Licence](https://img.shields.io/badge/licence-MIT-green.svg)
+**la page d'accueil**
 ![Home](/screenshots/Capture%20d’écran%202024-11-03%20232327.png)
+**la page d'ajoute**
 ![Ajouter](/screenshots/Capture%20d’écran%202024-11-03%20233349.png)
 
 Une application web moderne et intuitive de gestion de tâches, construite avec HTML, CSS (Tailwind) et JavaScript vanilla.
