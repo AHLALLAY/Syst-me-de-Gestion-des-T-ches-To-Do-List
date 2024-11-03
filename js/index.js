@@ -72,11 +72,11 @@ function createTaskElement(task) {
             <span>📅 Échéance: ${new Date(task.dueDate).toLocaleDateString()}</span>
         </div>
         <div class="flex gap-2">
-            ${task.status !== "Terminées" ? 
+            ${task.status === "À faire" ? 
                 `<button class="start-task text-blue-500 hover:text-blue-700 text-sm" data-task-id="${task.id}">
-                    ${task.status === "À faire" ? "▶️ Commencer" : "🔄 Reprendre"}
+                    ▶️ Commencer
                 </button>` : ""}
-            ${task.status !== "Terminées" ? 
+            ${task.status === "En cours" ? 
                 `<button class="complete-task text-green-500 hover:text-green-700 text-sm" data-task-id="${task.id}">
                     ✅ Terminer
                 </button>` : ""}
