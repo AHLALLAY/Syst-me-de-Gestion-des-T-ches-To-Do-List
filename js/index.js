@@ -50,6 +50,7 @@ function getPriorityStyles(priority) {
         case 'basse': return {border: 'border-l-4 border-green-500 border'}; break;
     }
 }
+
 function createTaskElement(task) {
     const taskElement = document.createElement("div");
     const priorityStyles = getPriorityStyles(task.priority);
@@ -61,6 +62,7 @@ function createTaskElement(task) {
     `;
     taskElement.dataset.taskId = task.id;
 
+    const dueDateClass = isDueDateOverdue(task.dueDate) ? 'text-red-500' : 'text-green-500';
     taskElement.innerHTML = `
         <div class="flex justify-between items-start">
             <h3 class="font-bold text-gray-800">${task.title}</h3>
@@ -68,7 +70,7 @@ function createTaskElement(task) {
                     data-task-id="${task.id}">×</button>
         </div>
         <p class="text-gray-600 text-sm my-2">${task.description}</p>
-        <div class="text-xs text-gray-500 mb-2">
+        <div class="text-xs ${dueDateClass} mb-2">
             <span>📅 Échéance: ${new Date(task.dueDate).toLocaleDateString()}</span>
         </div>
         <div class="flex gap-2">
@@ -190,6 +192,13 @@ function deleteTask(taskId) {
 
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Fonction pour vérifier si la date d'échéance est dépassée
+function isDueDateOverdue(dueDate) {
+    const today = new Date();
+    const due = new Date(dueDate);
+    return today >= due;
 }
 
 newTaskButton.addEventListener("click", () => {
