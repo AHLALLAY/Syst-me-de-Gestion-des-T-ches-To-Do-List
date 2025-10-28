@@ -1,33 +1,40 @@
 # 📋 Système de Gestion des Tâches — TaskFlow
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Taille](https://img.shields.io/badge/taille-légère-green.svg)
-![Licence](https://img.shields.io/badge/licence-MIT-green.svg)
+<div align="center">
 
-> **Assigné :** Houssni Ouchad  
-> **Créé :** 01/11/24
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![Taille](https://img.shields.io/badge/taille-légère-green.svg) ![Licence](https://img.shields.io/badge/licence-MIT-green.svg) ![Status](https://img.shields.io/badge/status-complété-success.svg)
+
+</div>
+
+
+> **👨‍💻 Assigné :** Houssni Ouchad  
+> **📅 Créé :** 01/11/24  
+> **🎯 Type :** Application Web de Gestion de Tâches
 
 ## 📝 Description du Projet
 
-Développer une application de gestion de tâches permettant d'ajouter, de rechercher, de filtrer et de prioriser les tâches en utilisant Html, CSS et Javascript. 
-L'application devra être responsive et proposer une interface fluide et attractive.
+**TaskFlow** est une application web moderne et intuitive de gestion de tâches, construite avec HTML, CSS (Tailwind) et JavaScript vanilla.
 
-Une application web moderne et intuitive de gestion de tâches, construite avec HTML, CSS (Tailwind) et JavaScript vanilla.
+### 🎯 Objectifs
+
+Développer une application de gestion de tâches permettant d'ajouter, de rechercher, de filtrer et de prioriser les tâches en utilisant HTML, CSS et JavaScript. L'application devra être responsive et proposer une interface fluide et attractive.
+
+### ✨ Points Forts
+
+- 🎨 **Interface moderne** avec Tailwind CSS
+- 📱 **Design responsive** pour tous les appareils  
+- 💾 **Persistance des données** avec LocalStorage
+- 🔍 **Recherche et filtrage** en temps réel
+- 🎯 **Système de priorités** visuel
 
 ## 🛠️ Technologies et Compétences
 
 <div align="center">
 
-![Algorithmique](https://img.shields.io/badge/Algorithmique-FF6B6B?style=flat-square&logo=algorithm&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Agility](https://img.shields.io/badge/Agility-00D4AA?style=flat-square&logo=agile&logoColor=white)
-![UX](https://img.shields.io/badge/UX-FF4081?style=flat-square&logo=ux&logoColor=white)
-![UI](https://img.shields.io/badge/UI-2196F3?style=flat-square&logo=ui&logoColor=white)
-![Accessibility](https://img.shields.io/badge/Accessibility-4CAF50?style=flat-square&logo=accessibility&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Algorithmique](https://img.shields.io/badge/Algorithmique-FF6B6B?style=flat-square&logo=algorithm&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Agility](https://img.shields.io/badge/Agility-00D4AA?style=flat-square&logo=agile&logoColor=white) ![UX](https://img.shields.io/badge/UX-FF4081?style=flat-square&logo=ux&logoColor=white) ![UI](https://img.shields.io/badge/UI-2196F3?style=flat-square&logo=ui&logoColor=white) ![Accessibility](https://img.shields.io/badge/Accessibility-4CAF50?style=flat-square&logo=accessibility&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
 </div>
+
 
 ### 🛠 Technologies utilisées
 
@@ -52,27 +59,25 @@ Une application web moderne et intuitive de gestion de tâches, construite avec 
 
 ## 📸 Captures d'Écran
 
-![Capture 1](screenshots/Capture%20d'écran%202024-11-03%20232327.png)
+![Interface TaskFlow](./screenshots/Capture%20d’écran%202024-11-03%20232327.png)
 
-![Capture 2](screenshots/Capture%20d'écran%202024-11-03%20233349.png)
+![Modal d'ajoute](./screenshots/Capture%20d’écran%202024-11-03%20233349.png)
 
 ---
 
 ## 🏢 Contexte du Projet
 
-> **TaskFlow** est une start-up qui souhaite rendre son équipe de développement plus efficace en installant un système simple pour gérer les tâches. L'application aidera les utilisateurs à créer, suivre et organiser leurs tâches, tout en simplifiant la planification des projets.
+> **🚀 TaskFlow** est une start-up qui souhaite rendre son équipe de développement plus efficace en installant un système simple pour gérer les tâches. L'application aidera les utilisateurs à créer, suivre et organiser leurs tâches, tout en simplifiant la planification des projets.
 
 ---
 
-## ✨ Caractéristiques principales
+## ✨ Caractéristiques Principales
 
-- Interface utilisateur moderne et responsive
-- Gestion des tâches en mode Kanban
-- Stockage local des données
-- Système de priorités visuelles
-- Barre de progression dynamique
-- Recherche en temps réel
-- Notifications toast personnalisées
+| 🎨 **Interface** | 🔧 **Fonctionnalités** | 💾 **Données** |
+|:---:|:---:|:---:|
+| Interface moderne et responsive | Gestion des tâches en mode Kanban | Stockage local des données |
+| Système de priorités visuelles | Barre de progression dynamique | Persistance avec LocalStorage |
+| Notifications toast personnalisées | Recherche en temps réel | Synchronisation automatique |
 
 ## 📖 User Stories
 
@@ -86,7 +91,7 @@ Une application web moderne et intuitive de gestion de tâches, construite avec 
 ### 🔧 Fonctionnalités Utilisateur
 - **En tant qu'utilisateur**, je veux pouvoir changer le statut d'une tâche spécifique.
 
-- **En tant qu'utilisateur**, je veux illustrer les statistiques (Nombre de differentes Taches).
+- **En tant qu'utilisateur**, je veux illustrer les statistiques (Nombre de différentes tâches).
 
 - **En tant que développeur Front-End**, je vais intégrer une fonctionnalité permettant de supprimer des tâches existantes, rendant ainsi l'application plus flexible et fonctionnelle.
 
@@ -103,11 +108,11 @@ Une application web moderne et intuitive de gestion de tâches, construite avec 
 ## ⭐ Fonctionnalités Bonus
 
 ### 🎯 Fonctionnalités Avancées
-- **En tant que développeur Front-End**, je vais créer un modal permettant d'ajouter plusieurs tâches. Ce modal contiendra des champs pour le titre, la description, la date d'échéance, et la priorité de la tâche (P1, P2, P3), et un bouton "+" pour ajouter les champs our insérer plus de taches.
+- **En tant que développeur Front-End**, je vais créer un modal permettant d'ajouter plusieurs tâches. Ce modal contiendra des champs pour le titre, la description, la date d'échéance, et la priorité de la tâche (P1, P2, P3), et un bouton "+" pour ajouter les champs pour insérer plus de tâches.
 
-- **En tant qu'utilisateur**, je veux pouvoir changer le statut d'une tâche spécifique. en utilisant le drag and drop.
+- **En tant qu'utilisateur**, je veux pouvoir changer le statut d'une tâche spécifique en utilisant le drag and drop.
 
-- **En tant qu'utilisateur**, je veux pouvoir acceder au modifications apres avoir actualisé la page ou quiter le site. en utilisant le LocalStorage.
+- **En tant qu'utilisateur**, je veux pouvoir accéder aux modifications après avoir actualisé la page ou quitté le site en utilisant le LocalStorage.
 
 - **En tant que développeur Front-End**, je vais intégrer une fonctionnalité permettant de modifier des tâches existantes, rendant ainsi l'application plus flexible et fonctionnelle.
 
@@ -152,105 +157,137 @@ Une application web moderne et intuitive de gestion de tâches, construite avec 
 - Toast de confirmation pour chaque action
 - Durée d'affichage : 3 secondes
 
-## 📦 Installation
+## 📦 Installation et Démarrage
 
-1. Clonez le dépôt :
+### 🚀 Installation Rapide
+
 ```bash
+# 1. Cloner le dépôt
 git clone https://github.com/AHLALLAY/Brief_TaskFlow-ToDoListe-
+
+# 2. Naviguer vers le dossier
+cd Brief_TaskFlow-ToDoListe-
+
+# 3. Ouvrir dans le navigateur
+open index.html  # macOS
+# ou double-cliquez sur index.html
 ```
 
-2. Ouvrez le fichier `index.html` dans votre navigateur
-```bash
-cd taskflow
-open index.html  # ou double-cliquez sur le fichier
+### 📋 Prérequis
+
+- ✅ Navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- ✅ Aucune installation supplémentaire requise
+
+## 💻 Structure du Projet
+
+```
+Syst-me-de-Gestion-des-T-ches-To-Do-List/
+├── 📄 index.html              # Page principale
+├── 📁 js/
+│   └── 📄 index.js            # Logique JavaScript
+├── 📁 src/
+│   ├── 📄 input.css           # Styles Tailwind
+│   └── 📄 output.css          # CSS compilé
+├── 📁 screenshots/            # Captures d'écran
+│   ├── 📷 Capture d'écran 2024-11-03 232327.png
+│   └── 📷 Capture d'écran 2024-11-03 233349.png
+├── 📄 tailwind.config.js      # Configuration Tailwind
+└── 📖 readme.md              # Documentation
 ```
 
-## 💻 Structure du projet
+## 🎯 Guide d'Utilisation
 
-```
-taskflow/
-├── dist/
-│   └─── index.html
-├── js/
-│   └─── index.js
-├── README.md
-└── .gitignore
-```
+### ➕ Créer une Nouvelle Tâche
 
-## 🎯 Utilisation
+| Étape | Action | Description |
+|:---:|:---:|:---:|
+| 1️⃣ | **Cliquer** | Bouton "Nouvelle tâche" |
+| 2️⃣ | **Remplir** | Formulaire avec les informations |
+| 3️⃣ | **Valider** | Confirmer la création |
 
-### Créer une nouvelle tâche
-1. Cliquez sur le bouton "Nouvelle tâche"
-2. Remplissez le formulaire :
-   - Titre (obligatoire)
-   - Description (obligatoire)
-   - Priorité (obligatoire)
-   - Date d'échéance (obligatoire)
-3. Validez le formulaire
+#### 📝 Champs Obligatoires
 
-### Gérer les tâches
-- **Commencer une tâche** : Cliquez sur le bouton "Commencer"
-- **Terminer une tâche** : Cliquez sur le bouton "Terminer"
-- **Supprimer une tâche** : Cliquez sur le bouton "×"
-- **Rechercher** : Utilisez la barre de recherche pour filtrer les tâches
+- ✅ **Titre** (3-20 caractères)
+- ✅ **Description** (10-200 caractères)  
+- ✅ **Priorité** (Haute/Moyenne/Basse)
+- ✅ **Date d'échéance**
 
-## 🔒 Validation des données
+### 🔧 Gestion des Tâches
 
-### Titre
-- Minimum : 3 caractères
-- Maximum : 20 caractères
+| Action | Bouton | Description |
+|:---:|:---:|:---|
+| ▶️ | **Commencer** | Passer de "À faire" à "En cours" |
+| ✅ | **Terminer** | Passer de "En cours" à "Terminées" |
+| ❌ | **Supprimer** | Supprimer définitivement la tâche |
+| 🔍 | **Rechercher** | Filtrer par titre ou mot-clé |
 
-### Description
-- Minimum : 10 caractères
-- Maximum : 200 caractères
 
-## 💾 Stockage
+## 🔒 Validation des Données
 
-Les données sont stockées localement dans le navigateur (LocalStorage) avec la structure suivante :
+| Champ | Minimum | Maximum | Format |
+|:---:|:---:|:---:|:---:|
+| **Titre** | 3 caractères | 20 caractères | Texte libre |
+| **Description** | 10 caractères | 200 caractères | Texte libre |
+| **Date** | - | - | Format ISO (YYYY-MM-DD) |
+| **Priorité** | - | - | Haute/Moyenne/Basse |
+
+
+## 💾 Stockage des Données
+
+### 🗄️ LocalStorage
+
+Les données sont stockées localement dans le navigateur avec la structure suivante :
 
 ```javascript
 {
-  id: string,
-  title: string,
-  description: string,
-  priority: "haute" | "moyenne" | "basse",
-  dueDate: string,
-  status: "À faire" | "En cours" | "Terminées"
+  id: string,                    // Identifiant unique
+  title: string,                 // Titre de la tâche
+  description: string,           // Description détaillée
+  priority: "haute" | "moyenne" | "basse",  // Niveau de priorité
+  dueDate: string,               // Date d'échéance (ISO)
+  status: "À faire" | "En cours" | "Terminées"  // Statut actuel
 }
 ```
 
-## 🌐 Compatibilité
+### 🔄 Synchronisation
 
-- Chrome
-- Firefox
-- Safari
-- Edge
-- Opera
+- ✅ **Automatique** : Sauvegarde à chaque modification
+- ✅ **Persistance** : Données conservées après fermeture du navigateur
+- ✅ **Réinitialisation** : Bouton pour vider toutes les données
+
 
 ## 📚 Modalités Pédagogiques
 
-> ⏰ **Durée :** 5 jours en autonomie  
-> 📅 **Date limite :** 03/11/2024 à 23h59  
-> 🤝 **Collaboration :** Aidez-vous les uns les autres
+| 📋 **Critère** | 📊 **Détail** |
+|:---:|:---:|
+| ⏰ **Durée** | 5 jours en autonomie |
+| 📅 **Date limite** | 03/11/2024 à 23h59 |
+| 🤝 **Collaboration** | Aidez-vous les uns les autres |
+| 📝 **Format** | Projet individuel |
+
 
 ## 📊 Modalités d'Évaluation
 
-### 🎤 Présentation de 20 minutes
+### 🎤 Présentation de 20 Minutes
 
-| Phase | Durée | Description |
-|-------|-------|-------------|
-| 🎯 **Démonstration** | 5 minutes | Présentation du livrable |
-| 💻 **Explication Code** | 10 minutes | Explication de la partie code |
-| ❓ **Q&A** | 5 minutes | Évaluation des savoirs |
+| Phase | ⏱️ Durée | 📋 Description |
+|:---:|:---:|:---|
+| 🎯 **Démonstration** | 5 minutes | Présentation du livrable fonctionnel |
+| 💻 **Explication Code** | 10 minutes | Explication de la partie technique |
+| ❓ **Q&A** | 5 minutes | Évaluation des savoirs acquis |
+
 
 ## 📦 Livrables
 
-### 📅 Livrable : 5ème jour
+### 📅 Livrable Final (5ème jour)
 
-- 🌐 **Un lien vers le site web hébergé sur GitHub Pages**
-- 📁 **Lien vers le repository GitHub contenant :**
-  - 📄 Le code source du site web en HTML/CSS/JAVASCRIPT avec tous les fichiers nécessaires
-  - 📖 README
+| 📋 **Type** | 🔗 **Contenu** |
+|:---:|:---|
+| 🌐 **Site Web** | Lien vers le site hébergé sur GitHub Pages |
+| 📁 **Repository** | Code source complet avec tous les fichiers |
+| 📖 **Documentation** | README détaillé et bien structuré |
+| 📧 **Rapport** | Rapport final par e-mail |
+
 
 > 📧 **Rapport final :** Un rapport englobant l'ensemble des tâches et des points abordés sera partagé par e-mail vers la fin du projet.
 
@@ -266,57 +303,98 @@ Les données sont stockées localement dans le navigateur (LocalStorage) avec la
 - ✅ Livrable présentable
 - ✅ Accessibilité : Le site doit être accessible à tous. Il doit respecter les normes WCAG pour l'accessibilité
 
+## 🎯 Critères de Performance
+
+### 💻 Qualité du Code
+
+| ✅ **Critère** | 📋 **Description** |
+|:---:|:---|
+| 🧠 **Maîtrise** | Bonne compréhension du code implémenté |
+| 📚 **Documentation** | Code bien documenté et commenté |
+| 🏗️ **Architecture** | Structure claire et modulaire |
+| 🔧 **Bonnes Pratiques** | Respect des standards (SEO, sémantique, etc.) |
+
+
+### 🌐 Standards Web
+
+| ✅ **Critère** | 📋 **Description** |
+|:---:|:---|
+| 🌍 **W3C** | Site conforme aux normes W3C |
+| 🎨 **Présentation** | Livrable professionnel et attractif |
+| ♿ **Accessibilité** | Respect des normes WCAG |
+| 📱 **Responsive** | Adaptation à tous les écrans |
+
+
 ### 🔧 Outils et Déploiement
-- ✅ Utilisation de systèmes de contrôle de version Git
-- ✅ Le site doit être correctement déployé sur un service d'hébergement gratuit
+
+| ✅ **Critère** | 📋 **Description** |
+|:---:|:---|
+| 📝 **Git** | Utilisation du contrôle de version |
+| 🚀 **Déploiement** | Site hébergé sur service gratuit |
+| 🔗 **Accessibilité** | Lien fonctionnel vers le site |
+
 
 ### 📱 Responsive Design
+
 Le site doit s'adapter parfaitement à tout type d'écrans :
 
-| Type d'écran | Résolution |
-|--------------|------------|
-| 🖥️ **Grand Écran d'Ordinateur** | À partir de 1280px de large |
-| 💻 **Petit Écran d'Ordinateur** | De 1024px à 1279px de large |
-| 📱 **Tablette** | De 768px à 1023px de large |
-| 📱 **Mobile** | Jusqu'à 767px de large |
+| 📱 **Type d'écran** | 📏 **Résolution** | 🎯 **Priorité** |
+|:---:|:---:|:---:|
+| 🖥️ **Grand Écran** | ≥ 1280px | Haute |
+| 💻 **Petit Écran** | 1024px - 1279px | Haute |
+| 📱 **Tablette** | 768px - 1023px | Moyenne |
+| 📱 **Mobile** | ≤ 767px | Haute |
+
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! Pour contribuer :
+**Les contributions sont les bienvenues !** 🎉
 
-1. Forkez le projet
-2. Créez une branche pour votre fonctionnalité
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. Commitez vos changements
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. Poussez vers la branche
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. Ouvrez une Pull Request
+
+### 🚀 Comment Contribuer
+
+| Étape | Action | Commande |
+|:---:|:---:|:---|
+| 1️⃣ | **Fork** | Cliquer sur "Fork" |
+| 2️⃣ | **Branche** | `git checkout -b feature/AmazingFeature` |
+| 3️⃣ | **Commit** | `git commit -m 'Add AmazingFeature'` |
+| 4️⃣ | **Push** | `git push origin feature/AmazingFeature` |
+| 5️⃣ | **PR** | Ouvrir une Pull Request |
+
 
 ## ✍️ Auteur
 
-Abderrahmane AHLALLAY
-- GitHub: [@AHLALLAY](https://github.com/AHLALLAY)
+<div align="center">
 
-## 📄 Licence
+### 👨‍💻 Abderrahmane AHLALLAY
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:abderrahmanahlalay76@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/ahlallay/)
 
-## 🔄 Mises à jour à venir
+</div>
 
-- [ ] Mode sombre
-- [ ] Drag and drop entre colonnes
-- [ ] Export des tâches
-- [ ] Filtres avancés
-- [ ] Tags pour les tâches
-- [ ] Mode hors ligne complet
+
+## 🔄 Roadmap Future
+
+| 🎯 **Fonctionnalité** | 📅 **Priorité** | 🚀 **Statut** |
+|:---:|:---:|:---:|
+| 🌙 Mode sombre | Haute | 🔄 En cours |
+| 🖱️ Drag & Drop | Haute | 📋 Planifié |
+| 📤 Export des tâches | Moyenne | 📋 Planifié |
+| 🔍 Filtres avancés | Moyenne | 📋 Planifié |
+| 🏷️ Tags pour tâches | Basse | 💡 Idée |
+| 📱 Mode hors ligne | Basse | 💡 Idée |
+
 
 ---
 
-Développé avec ❤️ par [Abderrahmane AHLALLAY](https://github.com/AHLALLAY)
+<div align="center">
+
+### 🎉 Merci d'avoir consulté TaskFlow !
+
+**Développé avec ❤️ par [Abderrahmane AHLALLAY](https://github.com/AHLALLAY)**
+
+[![Star](https://img.shields.io/github/stars/AHLALLAY/Brief_TaskFlow-ToDoListe-?style=social)](https://github.com/AHLALLAY/Brief_TaskFlow-ToDoListe-/stargazers)
+[![Fork](https://img.shields.io/github/forks/AHLALLAY/Brief_TaskFlow-ToDoListe-?style=social)](https://github.com/AHLALLAY/Brief_TaskFlow-ToDoListe-/network/members)
+
+</div>
